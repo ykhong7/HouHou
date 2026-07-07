@@ -1,0 +1,100 @@
+{
+  "id": 13,
+  "key": "slimecute",
+  "name": "걍슬라임",
+  "grade": "EPIC",
+  "hp": 85,
+  "atk": 90,
+  "def": 20,
+  "attackSpeed": 2,
+  "attackArea": 2,
+  "attackRange": 2,
+  "gridAttackRange": 2,
+  "moveSpeed": 3,
+  "gridMoveSpeed": 3,
+  "bodyRadius": 42,
+  "stopGap": 14,
+  "critRate": 0.15,
+  "attackType": "melee",
+  "paralyzeChance": 1.0,
+  "paralyzeDuration": 1.0,
+  "frameSize": 96,
+  "spritePath": "assets/characters/slimecute/",
+  "effectPath": "assets/effects/slimecute/attack.png",
+  "effectFrames": 4,
+  "soundPath": "assets/sounds/slimecute/",
+  "gachaRate": 10,
+  "attackMethod": "공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.",
+  "feature": "1초 마비, 2초 재마비 방지",
+  "animations": {
+    "idle": 2,
+    "walk": 6,
+    "attack": 6,
+    "hit": 1,
+    "dead": 2,
+    "win": 4
+  },
+  "aiType": "rush",
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "none_slimecute_v0.8.15_grid_removed_paralyze_cooldown",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "paralyzeCooldownAfter": 2.0,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 85,
+    "attack": 90,
+    "defense": 20,
+    "attackSpeed": 2,
+    "attackArea": 2,
+    "attackRange": 2,
+    "moveSpeed": 3,
+    "bodyRadius": 42,
+    "stopGap": 14,
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 2
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "melee",
+    "aiType": "rush",
+    "attackMethod": "공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.",
+    "feature": "1초 마비, 2초 재마비 방지"
+  },
+  "assets": {
+    "spritePath": "assets/characters/slimecute/",
+    "effectPath": "assets/effects/slimecute/attack.png",
+    "soundPath": "assets/sounds/slimecute/",
+    "projectilePath": null
+  },
+  "effect": {
+    "path": "assets/effects/slimecute/attack.png",
+    "frames": 4,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "skills": [
+    {
+      "type": "paralyze",
+      "chance": 1.0,
+      "duration": 1.0,
+      "cooldownAfter": 2.0
+    }
+  ]
+}

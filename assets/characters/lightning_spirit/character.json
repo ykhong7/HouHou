@@ -1,0 +1,103 @@
+{
+  "id": 11,
+  "key": "lightning_spirit",
+  "name": "번개정령",
+  "grade": "LEGENDARY",
+  "hp": 120,
+  "atk": 35,
+  "def": 60,
+  "attackSpeed": 2,
+  "attackArea": 8,
+  "attackRange": 10,
+  "gridAttackRange": 10,
+  "moveSpeed": 2,
+  "gridMoveSpeed": 2,
+  "bodyRadius": 56,
+  "stopGap": 18,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/lightning_spirit/lightning_bolt.png",
+  "projectileSpeedCells": 10,
+  "projectileFrames": 4,
+  "frameSize": 96,
+  "spritePath": "assets/characters/lightning_spirit/",
+  "effectPath": "assets/effects/lightning_spirit/attack.png",
+  "effectFrames": 4,
+  "soundPath": "assets/sounds/lightning_spirit/",
+  "gachaRate": 10,
+  "attackMethod": "번개를 손으로 쏴서 꿰뚫는다",
+  "feature": "원거리 번개 공격",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2,
+    "win": 4
+  },
+  "aiType": "projectile",
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "none_lightning_spirit_v0.8.26_json_split",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2.5,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 120,
+    "attack": 35,
+    "defense": 60,
+    "attackSpeed": 2,
+    "attackArea": 8,
+    "attackRange": 10,
+    "moveSpeed": 2,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 2,
+    "gridAttackRange": 10
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2.5
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": "projectile",
+    "attackMethod": "번개를 손으로 쏴서 꿰뚫는다",
+    "feature": "원거리 번개 공격"
+  },
+  "assets": {
+    "spritePath": "assets/characters/lightning_spirit/",
+    "effectPath": "assets/effects/lightning_spirit/attack.png",
+    "soundPath": "assets/sounds/lightning_spirit/",
+    "projectilePath": "assets/projectiles/lightning_spirit/lightning_bolt.png"
+  },
+  "effect": {
+    "path": "assets/effects/lightning_spirit/attack.png",
+    "frames": 4,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/lightning_spirit/lightning_bolt.png",
+    "speed": null,
+    "speedCells": 10,
+    "frames": 4,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": []
+}

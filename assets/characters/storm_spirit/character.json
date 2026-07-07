@@ -1,0 +1,103 @@
+{
+  "id": 8,
+  "key": "storm_spirit",
+  "name": "폭풍정령",
+  "grade": "LEGENDARY",
+  "hp": 120,
+  "atk": 35,
+  "def": 80,
+  "attackSpeed": 5,
+  "attackArea": 70,
+  "attackRange": 4,
+  "moveSpeed": 3,
+  "bodyRadius": 56,
+  "stopGap": 18,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/storm_spirit/tornado.png",
+  "projectileSpeed": 680,
+  "projectileFrames": 6,
+  "frameSize": 96,
+  "spritePath": "assets/characters/storm_spirit/",
+  "effectPath": "assets/effects/storm_spirit/attack.png",
+  "effectFrames": 6,
+  "gachaRate": 10,
+  "attackMethod": "강력한 회오리를 발사",
+  "feature": "회오리 발사",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "aiType": "projectile",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 4,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2.5,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 120,
+    "attack": 35,
+    "defense": 80,
+    "attackSpeed": 5,
+    "attackArea": 70,
+    "attackRange": 4,
+    "moveSpeed": 3,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 4
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2.5
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": "projectile",
+    "attackMethod": "강력한 회오리를 발사",
+    "feature": "회오리 발사"
+  },
+  "assets": {
+    "spritePath": "assets/characters/storm_spirit/",
+    "effectPath": "assets/effects/storm_spirit/attack.png",
+    "soundPath": null,
+    "projectilePath": "assets/projectiles/storm_spirit/tornado.png"
+  },
+  "effect": {
+    "path": "assets/effects/storm_spirit/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/storm_spirit/tornado.png",
+    "speed": 680,
+    "speedCells": 8,
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": []
+}

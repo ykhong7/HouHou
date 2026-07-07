@@ -1,0 +1,89 @@
+{
+  "id": 7,
+  "key": "jjabbeorin",
+  "name": "짭버린",
+  "grade": "EPIC",
+  "hp": 120,
+  "atk": 25,
+  "def": 50,
+  "attackSpeed": 4,
+  "attackArea": 45,
+  "attackRange": 2,
+  "moveSpeed": 3.5,
+  "bodyRadius": 48,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/jjabbeorin/",
+  "effectPath": "assets/effects/jjabbeorin/attack.png",
+  "effectFrames": 6,
+  "gachaRate": 10,
+  "attackMethod": "손등에 튀어나온 칼날손톱으로 공격",
+  "feature": "칼날손톱 공격",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "aiType": "rush",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3.5,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 120,
+    "attack": 25,
+    "defense": 50,
+    "attackSpeed": 4,
+    "attackArea": 45,
+    "attackRange": 2,
+    "moveSpeed": 3.5,
+    "bodyRadius": 48,
+    "stopGap": 16,
+    "gridMoveSpeed": 3.5,
+    "gridAttackRange": 2
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "melee",
+    "aiType": "rush",
+    "attackMethod": "손등에 튀어나온 칼날손톱으로 공격",
+    "feature": "칼날손톱 공격"
+  },
+  "assets": {
+    "spritePath": "assets/characters/jjabbeorin/",
+    "effectPath": "assets/effects/jjabbeorin/attack.png",
+    "soundPath": null,
+    "projectilePath": null
+  },
+  "effect": {
+    "path": "assets/effects/jjabbeorin/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "skills": []
+}

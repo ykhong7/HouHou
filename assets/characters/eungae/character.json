@@ -1,0 +1,102 @@
+{
+  "id": 4,
+  "key": "eungae",
+  "name": "응애",
+  "grade": "NORMAL",
+  "hp": 140,
+  "atk": 20,
+  "def": 10,
+  "attackSpeed": 2,
+  "attackArea": 60,
+  "attackRange": 6,
+  "moveSpeed": 2,
+  "bodyRadius": 36,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/eungae/candy.png",
+  "projectileSpeed": 620,
+  "frameSize": 96,
+  "spritePath": "assets/characters/eungae/",
+  "effectPath": "assets/effects/eungae/attack.png",
+  "effectFrames": 5,
+  "gachaRate": 10,
+  "attackMethod": "입에서 사탕을 뱉음",
+  "feature": "사탕 투사체",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 2,
+  "gridAttackRange": 6,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileFrames": 1,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 140,
+    "attack": 20,
+    "defense": 10,
+    "attackSpeed": 2,
+    "attackArea": 60,
+    "attackRange": 6,
+    "moveSpeed": 2,
+    "bodyRadius": 36,
+    "stopGap": 16,
+    "gridMoveSpeed": 2,
+    "gridAttackRange": 6
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": null,
+    "attackMethod": "입에서 사탕을 뱉음",
+    "feature": "사탕 투사체"
+  },
+  "assets": {
+    "spritePath": "assets/characters/eungae/",
+    "effectPath": "assets/effects/eungae/attack.png",
+    "soundPath": null,
+    "projectilePath": "assets/projectiles/eungae/candy.png"
+  },
+  "effect": {
+    "path": "assets/effects/eungae/attack.png",
+    "frames": 5,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/eungae/candy.png",
+    "speed": 620,
+    "speedCells": 8,
+    "frames": 1,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": []
+}

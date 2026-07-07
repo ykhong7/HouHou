@@ -1,0 +1,103 @@
+{
+  "id": 10,
+  "key": "fire_spirit",
+  "name": "불꽃정령",
+  "grade": "LEGENDARY",
+  "hp": 120,
+  "atk": 30,
+  "def": 60,
+  "attackSpeed": 2,
+  "attackArea": 5,
+  "attackRange": 10,
+  "gridAttackRange": 10,
+  "moveSpeed": 2,
+  "gridMoveSpeed": 2,
+  "bodyRadius": 56,
+  "stopGap": 18,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/fire_spirit/fire_ground.png",
+  "projectileSpeedCells": 8,
+  "projectileFrames": 5,
+  "frameSize": 96,
+  "spritePath": "assets/characters/fire_spirit/",
+  "effectPath": "assets/effects/fire_spirit/attack.png",
+  "effectFrames": 5,
+  "soundPath": "assets/sounds/fire_spirit/",
+  "gachaRate": 10,
+  "attackMethod": "불꽃을 손으로 쏴서 지면을 불태운다.",
+  "feature": "지면 불꽃 공격",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2,
+    "win": 4
+  },
+  "aiType": "projectile",
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "none_fire_spirit_v0.6.5",
+  "effectStartFrame": 1,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 1,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2.5,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 120,
+    "attack": 30,
+    "defense": 60,
+    "attackSpeed": 2,
+    "attackArea": 5,
+    "attackRange": 10,
+    "moveSpeed": 2,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 2,
+    "gridAttackRange": 10
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2.5
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": "projectile",
+    "attackMethod": "불꽃을 손으로 쏴서 지면을 불태운다.",
+    "feature": "지면 불꽃 공격"
+  },
+  "assets": {
+    "spritePath": "assets/characters/fire_spirit/",
+    "effectPath": "assets/effects/fire_spirit/attack.png",
+    "soundPath": "assets/sounds/fire_spirit/",
+    "projectilePath": "assets/projectiles/fire_spirit/fire_ground.png"
+  },
+  "effect": {
+    "path": "assets/effects/fire_spirit/attack.png",
+    "frames": 5,
+    "startFrame": 1,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/fire_spirit/fire_ground.png",
+    "speed": null,
+    "speedCells": 8,
+    "frames": 5,
+    "startFrame": 1,
+    "frameWidth": 96
+  },
+  "skills": []
+}

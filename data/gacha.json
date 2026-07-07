@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0-data-driven",
+  "pool": [
+    {
+      "key": "normal_man",
+      "rate": 10
+    },
+    {
+      "key": "meongdungi",
+      "rate": 10
+    },
+    {
+      "key": "gomangi",
+      "rate": 10
+    },
+    {
+      "key": "eungae",
+      "rate": 10
+    },
+    {
+      "key": "awakened_normal_man",
+      "rate": 10
+    },
+    {
+      "key": "bokjujok",
+      "rate": 10
+    },
+    {
+      "key": "jjabbeorin",
+      "rate": 10
+    },
+    {
+      "key": "storm_spirit",
+      "rate": 10
+    },
+    {
+      "key": "vampire_king",
+      "rate": 10
+    },
+    {
+      "key": "fire_spirit",
+      "rate": 10
+    },
+    {
+      "key": "lightning_spirit",
+      "rate": 10
+    },
+    {
+      "key": "little_spirit",
+      "rate": 10
+    },
+    {
+      "key": "slimecute",
+      "rate": 10
+    }
+  ]
+}

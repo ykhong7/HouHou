@@ -1,0 +1,102 @@
+{
+  "id": 2,
+  "key": "meongdungi",
+  "name": "멍둥이",
+  "grade": "NORMAL",
+  "hp": 180,
+  "atk": 20,
+  "def": 20,
+  "attackSpeed": 1,
+  "attackArea": 60,
+  "attackRange": 2,
+  "moveSpeed": 2,
+  "bodyRadius": 48,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/meongdungi/stone.png",
+  "projectileSpeed": 520,
+  "frameSize": 96,
+  "spritePath": "assets/characters/meongdungi/",
+  "effectPath": "assets/effects/meongdungi/attack.png",
+  "effectFrames": 5,
+  "gachaRate": 10,
+  "attackMethod": "입에서 돌맹이가 나옴",
+  "feature": "돌멩이 투사체",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 2,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileFrames": 1,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 180,
+    "attack": 20,
+    "defense": 20,
+    "attackSpeed": 1,
+    "attackArea": 60,
+    "attackRange": 2,
+    "moveSpeed": 2,
+    "bodyRadius": 48,
+    "stopGap": 16,
+    "gridMoveSpeed": 2,
+    "gridAttackRange": 2
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": null,
+    "attackMethod": "입에서 돌맹이가 나옴",
+    "feature": "돌멩이 투사체"
+  },
+  "assets": {
+    "spritePath": "assets/characters/meongdungi/",
+    "effectPath": "assets/effects/meongdungi/attack.png",
+    "soundPath": null,
+    "projectilePath": "assets/projectiles/meongdungi/stone.png"
+  },
+  "effect": {
+    "path": "assets/effects/meongdungi/attack.png",
+    "frames": 5,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/meongdungi/stone.png",
+    "speed": 520,
+    "speedCells": 8,
+    "frames": 1,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": []
+}

@@ -1,0 +1,120 @@
+{
+  "id": 5,
+  "key": "awakened_normal_man",
+  "name": "각성한 걍사람",
+  "grade": "SPECIAL",
+  "hp": 200,
+  "atk": 35,
+  "def": 80,
+  "attackSpeed": 2.5,
+  "attackArea": 70,
+  "attackRange": 4,
+  "moveSpeed": 3,
+  "bodyRadius": 56,
+  "stopGap": 18,
+  "critRate": 0.15,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/awakened_normal_man/",
+  "effectPath": "assets/effects/awakened_normal_man/attack.png",
+  "effectFrames": 5,
+  "gachaRate": 10,
+  "attackMethod": "몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.",
+  "feature": "중심 각성 이펙트 후 전방 방출",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 4,
+    "hit": 1,
+    "dead": 2,
+    "win": 4
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 4,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1_v0.8.22_awakened_effect5_forward",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 192,
+  "centerEffect": true,
+  "effectAnchor": "attacker_center",
+  "effectScale": 1.35,
+  "effectFrameSequence": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "effectFrameOffsets": [
+    0,
+    20,
+    40,
+    40,
+    96
+  ],
+  "hitEffect": true,
+  "hitEffectStart": 0.6,
+  "critDamageMin": 1.5,
+  "critDamageMax": 3,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 200,
+    "attack": 35,
+    "defense": 80,
+    "attackSpeed": 2.5,
+    "attackArea": 70,
+    "attackRange": 4,
+    "moveSpeed": 3,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 4
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 3
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "melee",
+    "aiType": null,
+    "attackMethod": "몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.",
+    "feature": "중심 각성 이펙트 후 전방 방출"
+  },
+  "assets": {
+    "spritePath": "assets/characters/awakened_normal_man/",
+    "effectPath": "assets/effects/awakened_normal_man/attack.png",
+    "soundPath": null,
+    "projectilePath": null
+  },
+  "effect": {
+    "path": "assets/effects/awakened_normal_man/attack.png",
+    "frames": 5,
+    "startFrame": 0,
+    "frameWidth": 192,
+    "centerEffect": true,
+    "anchor": "attacker_center",
+    "scale": 1.35,
+    "frameSequence": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "frameOffsets": [
+      0,
+      20,
+      40,
+      40,
+      96
+    ],
+    "hitEffect": true,
+    "hitEffectStart": 0.6
+  },
+  "skills": []
+}

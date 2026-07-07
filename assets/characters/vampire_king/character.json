@@ -1,0 +1,109 @@
+{
+  "id": 9,
+  "key": "vampire_king",
+  "name": "뱀파이어킹",
+  "grade": "SUPER EPIC",
+  "hp": 100,
+  "atk": 35,
+  "def": 50,
+  "attackSpeed": 2,
+  "attackArea": 90,
+  "attackRange": 6,
+  "moveSpeed": 3,
+  "bodyRadius": 56,
+  "stopGap": 18,
+  "critRate": 0.15,
+  "attackType": "projectile",
+  "projectilePath": "assets/projectiles/vampire_king/blood_wave.png",
+  "projectileSpeed": 580,
+  "projectileFrames": 6,
+  "lifeSteal": 0.2,
+  "frameSize": 96,
+  "spritePath": "assets/characters/vampire_king/",
+  "effectPath": "assets/effects/vampire_king/attack.png",
+  "effectFrames": 6,
+  "gachaRate": 10,
+  "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
+  "feature": "20% 흡혈",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "aiType": "projectile",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 6,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2.5,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 100,
+    "attack": 35,
+    "defense": 50,
+    "attackSpeed": 2,
+    "attackArea": 90,
+    "attackRange": 6,
+    "moveSpeed": 3,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 6
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2.5
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": "projectile",
+    "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
+    "feature": "20% 흡혈"
+  },
+  "assets": {
+    "spritePath": "assets/characters/vampire_king/",
+    "effectPath": "assets/effects/vampire_king/attack.png",
+    "soundPath": null,
+    "projectilePath": "assets/projectiles/vampire_king/blood_wave.png"
+  },
+  "effect": {
+    "path": "assets/effects/vampire_king/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/vampire_king/blood_wave.png",
+    "speed": 580,
+    "speedCells": 8,
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": [
+    {
+      "type": "lifesteal",
+      "value": 0.2
+    }
+  ]
+}

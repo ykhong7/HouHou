@@ -1,0 +1,103 @@
+{
+  "id": 12,
+  "key": "little_spirit",
+  "name": "꼬마정령",
+  "grade": "LEGENDARY",
+  "hp": 100,
+  "atk": 40,
+  "def": 50,
+  "attackSpeed": 2,
+  "attackArea": 5,
+  "attackRange": 5,
+  "gridAttackRange": 5,
+  "moveSpeed": 4,
+  "gridMoveSpeed": 4,
+  "bodyRadius": 36,
+  "stopGap": 14,
+  "critRate": 0.15,
+  "attackType": "melee",
+  "lifeSteal": 0.15,
+  "extraHitChance": 0.5,
+  "extraHitAtk": 20,
+  "frameSize": 96,
+  "spritePath": "assets/characters/little_spirit/",
+  "effectPath": "assets/effects/little_spirit/attack.png",
+  "effectFrames": 6,
+  "soundPath": "assets/sounds/little_spirit/",
+  "gachaRate": 10,
+  "attackMethod": "공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.",
+  "feature": "15% 흡혈, 50% 확률 2타",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 4,
+    "hit": 1,
+    "dead": 2,
+    "win": 4
+  },
+  "aiType": "rush",
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "none_little_spirit_v0.8.11_speed4_grid_removed",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 3,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 100,
+    "attack": 40,
+    "defense": 50,
+    "attackSpeed": 2,
+    "attackArea": 5,
+    "attackRange": 5,
+    "moveSpeed": 4,
+    "bodyRadius": 36,
+    "stopGap": 14,
+    "gridMoveSpeed": 4,
+    "gridAttackRange": 5
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 3
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "melee",
+    "aiType": "rush",
+    "attackMethod": "공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.",
+    "feature": "15% 흡혈, 50% 확률 2타"
+  },
+  "assets": {
+    "spritePath": "assets/characters/little_spirit/",
+    "effectPath": "assets/effects/little_spirit/attack.png",
+    "soundPath": "assets/sounds/little_spirit/",
+    "projectilePath": null
+  },
+  "effect": {
+    "path": "assets/effects/little_spirit/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "skills": [
+    {
+      "type": "lifesteal",
+      "value": 0.15
+    },
+    {
+      "type": "double_attack",
+      "chance": 0.5,
+      "damage": 20
+    }
+  ]
+}
