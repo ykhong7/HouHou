@@ -1,16 +1,18 @@
-# HouHou Fighter v1.2.0
+# HouHou Engine v1.0.0
 
-Data-Driven 리팩토링 2단계 버전입니다.
+HouHou Fighter를 데이터 중심 구조로 정리한 엔진화 버전입니다.
 
 ## 핵심 변경
-- `js/managers/CharacterManager.js` 실제 런타임 로더로 분리
-- `game.bundle.js`는 CharacterManager를 우선 호출하고 실패 시 내장 fallback 로더 사용
-- `character_manifest.json` + 각 캐릭터 `character.json` 기반 자동 로드 유지
-- 기존 전투/뽑기/이펙트/슬라임/각성한 걍사람 기능 유지
-- 우측 하단 크레딧 `Art by 홍은성` 유지
+- `game.bundle.js`를 빈 호환 파일로 전환했습니다.
+- 실제 부트스트랩은 `js/houhouEngine.js`에서 담당합니다.
+- 게임 기능은 역할별 JS 파일로 분리되어 있습니다.
+- 캐릭터 데이터는 `assets/characters/*/character.json` 기준으로 관리합니다.
 
 ## 신규 캐릭터 추가
-1. `assets/characters/<key>/character.json` 작성
-2. PNG 리소스 추가
-3. `data/character_manifest.json`에 character.json 경로 추가
-4. 필요 시 `data/gacha.json`에 뽑기 weight 추가
+현재 GitHub Pages 같은 정적 웹 환경을 기준으로 안정성을 우선했습니다.
+
+1. 기존 캐릭터 폴더를 복사합니다.
+2. `character.json`과 이미지를 수정합니다.
+3. `data/character_manifest.json`에 새 캐릭터 폴더 경로를 1줄 추가합니다.
+
+자세한 구조는 `docs/ENGINE_STRUCTURE.md`를 참고하세요.

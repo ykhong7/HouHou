@@ -1,15 +1,15 @@
 [
-  "assets/characters/normal_man/character.json",
-  "assets/characters/meongdungi/character.json",
-  "assets/characters/gomangi/character.json",
-  "assets/characters/eungae/character.json",
   "assets/characters/awakened_normal_man/character.json",
   "assets/characters/bokjujok/character.json",
-  "assets/characters/jjabbeorin/character.json",
-  "assets/characters/storm_spirit/character.json",
-  "assets/characters/vampire_king/character.json",
+  "assets/characters/eungae/character.json",
   "assets/characters/fire_spirit/character.json",
+  "assets/characters/gomangi/character.json",
+  "assets/characters/jjabbeorin/character.json",
   "assets/characters/lightning_spirit/character.json",
   "assets/characters/little_spirit/character.json",
-  "assets/characters/slimecute/character.json"
+  "assets/characters/meongdungi/character.json",
+  "assets/characters/normal_man/character.json",
+  "assets/characters/slimecute/character.json",
+  "assets/characters/storm_spirit/character.json",
+  "assets/characters/vampire_king/character.json"
 ]
