@@ -19,8 +19,6 @@
   "projectileFrames": 6,
   "frameSize": 96,
   "spritePath": "assets/characters/storm_spirit/",
-  "effectPath": "assets/effects/storm_spirit/attack.png",
-  "effectFrames": 6,
   "gachaRate": 10,
   "attackMethod": "강력한 회오리를 발사",
   "feature": "회오리 발사",
@@ -38,13 +36,11 @@
   "gridBattleRule": "30_columns_full_engine",
   "projectileSpeedCells": 8,
   "rangeMultiplierApplied": "x2_v0.6.1",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 96,
   "projectileStartFrame": 0,
   "projectileFrameWidth": 96,
   "critDamageMin": 1.5,
   "critDamageMax": 2.5,
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 120,
     "attack": 35,
@@ -74,22 +70,8 @@
   },
   "assets": {
     "spritePath": "assets/characters/storm_spirit/",
-    "effectPath": "assets/effects/storm_spirit/attack.png",
     "soundPath": null,
     "projectilePath": "assets/projectiles/storm_spirit/tornado.png"
-  },
-  "effect": {
-    "path": "assets/effects/storm_spirit/attack.png",
-    "frames": 6,
-    "startFrame": 0,
-    "frameWidth": 96,
-    "centerEffect": false,
-    "anchor": null,
-    "scale": 1,
-    "frameSequence": null,
-    "frameOffsets": null,
-    "hitEffect": false,
-    "hitEffectStart": 0.38
   },
   "projectile": {
     "path": "assets/projectiles/storm_spirit/tornado.png",
@@ -97,7 +79,32 @@
     "speedCells": 8,
     "frames": 6,
     "startFrame": 0,
-    "frameWidth": 96
+    "frameWidth": 96,
+    "trajectory": "ground",
+    "scale": 1,
+    "width": 105,
+    "height": 52,
+    "spawnX": 46,
+    "spawnY": -58,
+    "targetX": -18,
+    "targetY": 35,
+    "arcHeight": 80,
+    "enabled": true
   },
-  "skills": []
+  "skills": [],
+  "hitEffect": {
+    "path": "assets/hitEffects/storm_spirit/hit.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "scale": 1,
+    "width": 190,
+    "height": 62,
+    "offsetX": 0,
+    "offsetY": 12,
+    "playOnce": true,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "enabled": true
+  }
 }

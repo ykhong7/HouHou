@@ -20,8 +20,6 @@
   "paralyzeDuration": 1.0,
   "frameSize": 96,
   "spritePath": "assets/characters/slimecute/",
-  "effectPath": "assets/effects/slimecute/attack.png",
-  "effectFrames": 4,
   "soundPath": "assets/sounds/slimecute/",
   "gachaRate": 10,
   "attackMethod": "공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.",
@@ -37,12 +35,10 @@
   "aiType": "rush",
   "gridBattleRule": "30_columns_full_engine",
   "rangeMultiplierApplied": "none_slimecute_v0.8.15_grid_removed_paralyze_cooldown",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 96,
   "paralyzeCooldownAfter": 2.0,
   "critDamageMin": 1.5,
   "critDamageMax": 2,
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 85,
     "attack": 90,
@@ -72,22 +68,8 @@
   },
   "assets": {
     "spritePath": "assets/characters/slimecute/",
-    "effectPath": "assets/effects/slimecute/attack.png",
     "soundPath": "assets/sounds/slimecute/",
     "projectilePath": null
-  },
-  "effect": {
-    "path": "assets/effects/slimecute/attack.png",
-    "frames": 4,
-    "startFrame": 0,
-    "frameWidth": 96,
-    "centerEffect": false,
-    "anchor": null,
-    "scale": 1,
-    "frameSequence": null,
-    "frameOffsets": null,
-    "hitEffect": false,
-    "hitEffectStart": 0.38
   },
   "skills": [
     {
@@ -96,5 +78,21 @@
       "duration": 1.0,
       "cooldownAfter": 2.0
     }
-  ]
+  ],
+  "attackEffect": {
+    "path": "assets/attackEffects/slimecute/attack.png",
+    "frames": 4,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "scale": 1,
+    "width": 120,
+    "height": 120,
+    "offsetX": 0,
+    "offsetY": -25,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "playOnce": true,
+    "enabled": true
+  }
 }

@@ -1,20 +1,115 @@
-// v1.6.0 file:// fallback data. HTTP/GitHub Pages는 data/character_manifest.json의 assets/characters/*/character.json을 우선 사용한다.
-window.HOUHOU_CHARACTER_MANIFEST = [
-  "data/characters/normal_man.json",
-  "data/characters/meongdungi.json",
-  "data/characters/gomangi.json",
-  "data/characters/eungae.json",
-  "data/characters/awakened_normal_man.json",
-  "data/characters/bokjujok.json",
-  "data/characters/jjabbeorin.json",
-  "data/characters/storm_spirit.json",
-  "data/characters/vampire_king.json",
-  "data/characters/fire_spirit.json",
-  "data/characters/lightning_spirit.json",
-  "data/characters/little_spirit.json",
-  "data/characters/slimecute.json"
-];
+// v1.0.8 fallback character data generated from assets/characters/*/character.json
 window.HOUHOU_CHARACTER_DATA = [
+  {
+    "id": 14,
+    "key": "awakened_eungae",
+    "name": "각성한 응애",
+    "grade": "EPIC",
+    "hp": 180,
+    "atk": 45,
+    "def": 20,
+    "attackSpeed": 3,
+    "attackArea": 60,
+    "attackRange": 6,
+    "moveSpeed": 3,
+    "bodyRadius": 45,
+    "stopGap": 16,
+    "critRate": 0.15,
+    "attackType": "projectile",
+    "projectilePath": "assets/projectiles/awakened_eungae/candy.png",
+    "projectileSpeed": 620,
+    "frameSize": 96,
+    "spritePath": "assets/characters/awakened_eungae/",
+    "gachaRate": 10,
+    "attackMethod": "쪽쪽이를 던진다",
+    "feature": "쪽쪽이 투사체",
+    "animations": {
+      "idle": 2,
+      "walk": 3,
+      "attack": 3,
+      "hit": 1,
+      "dead": 2,
+      "win": 2
+    },
+    "gridMovementRule": "screen_width_30_cells",
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 6,
+    "gridBattleRule": "30_columns_full_engine",
+    "projectileSpeedCells": 8,
+    "rangeMultiplierApplied": "x2_v0.6.1",
+    "projectileFrames": 5,
+    "projectileStartFrame": 0,
+    "projectileFrameWidth": 96,
+    "critDamageMin": 1.5,
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 180,
+      "attack": 45,
+      "defense": 20,
+      "attackSpeed": 3,
+      "attackArea": 60,
+      "attackRange": 6,
+      "moveSpeed": 3,
+      "bodyRadius": 45,
+      "stopGap": 16,
+      "gridMoveSpeed": 3,
+      "gridAttackRange": 6
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": null,
+      "attackMethod": "쪽쪽이를 던진다",
+      "feature": "쪽쪽이 투사체"
+    },
+    "assets": {
+      "spritePath": "assets/characters/awakened_eungae/",
+      "soundPath": null,
+      "projectilePath": "assets/projectiles/awakened_eungae/Pacifier.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/awakened_eungae/Pacifier.png",
+      "speed": 620,
+      "speedCells": 8,
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1.5,
+      "width": 96,
+      "height": 96,
+      "spawnX": 46,
+      "spawnY": -60,
+      "targetX": -18,
+      "targetY": 24,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/awakened_eungae/hit.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 2,
+      "width": 96,
+      "height": 96,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
+  },
   {
     "id": 5,
     "key": "awakened_normal_man",
@@ -33,8 +128,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "frameSize": 96,
     "spritePath": "assets/characters/awakened_normal_man/",
-    "effectPath": "assets/effects/awakened_normal_man/attack.png",
-    "effectFrames": 5,
     "gachaRate": 10,
     "attackMethod": "몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.",
     "feature": "중심 각성 이펙트 후 전방 방출",
@@ -46,35 +139,84 @@ window.HOUHOU_CHARACTER_DATA = [
       "dead": 2,
       "win": 4
     },
-    "soundPath": "assets/sounds/awakened_normal_man/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 3,
     "gridAttackRange": 4,
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "x2_v0.6.1_v0.8.22_awakened_effect5_forward",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 192,
-    "centerEffect": true,
-    "effectAnchor": "attacker_center",
-    "effectFrameSequence": [
-      0,
-      1,
-      2,
-      3,
-      4
-    ],
-    "effectFrameOffsets": [
-      0,
-      20,
-      40,
-      40,
-      96
-    ],
-    "effectScale": 1.35,
-    "hitEffect": true,
-    "hitEffectStart": 0.6,
+    "hitEffect": {
+      "path": null,
+      "enabled": true,
+      "style": "burst",
+      "start": 0.6,
+      "offsetX": 0,
+      "offsetY": -48
+    },
     "critDamageMin": 1.5,
-    "critDamageMax": 3
+    "critDamageMax": 3,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 200,
+      "attack": 35,
+      "defense": 80,
+      "attackSpeed": 2.5,
+      "attackArea": 70,
+      "attackRange": 4,
+      "moveSpeed": 3,
+      "bodyRadius": 56,
+      "stopGap": 18,
+      "gridMoveSpeed": 3,
+      "gridAttackRange": 4
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 3
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": null,
+      "attackMethod": "몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.",
+      "feature": "중심 각성 이펙트 후 전방 방출"
+    },
+    "assets": {
+      "spritePath": "assets/characters/awakened_normal_man/",
+      "soundPath": null,
+      "projectilePath": null
+    },
+    "skills": [],
+    "attackEffect": {
+      "path": "assets/attackEffects/awakened_normal_man/attack.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 192,
+      "centerEffect": true,
+      "anchor": "attacker_center",
+      "scale": 1.35,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "frameOffsets": [
+        0,
+        20,
+        40,
+        40,
+        96
+      ],
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 6,
@@ -94,8 +236,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "frameSize": 96,
     "spritePath": "assets/characters/bokjujok/",
-    "effectPath": "assets/effects/bokjujok/attack.png",
-    "effectFrames": 6,
     "gachaRate": 10,
     "attackMethod": "손이 여러 개 보이도록 공격",
     "feature": "연속 손 공격",
@@ -107,16 +247,63 @@ window.HOUHOU_CHARACTER_DATA = [
       "dead": 2
     },
     "aiType": "rush",
-    "soundPath": "assets/sounds/bokjujok/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 3.5,
     "gridAttackRange": 2,
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 120,
+      "attack": 25,
+      "defense": 40,
+      "attackSpeed": 4,
+      "attackArea": 45,
+      "attackRange": 2,
+      "moveSpeed": 3.5,
+      "bodyRadius": 48,
+      "stopGap": 16,
+      "gridMoveSpeed": 3.5,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": "rush",
+      "attackMethod": "손이 여러 개 보이도록 공격",
+      "feature": "연속 손 공격"
+    },
+    "assets": {
+      "spritePath": "assets/characters/bokjujok/",
+      "soundPath": null,
+      "projectilePath": null
+    },
+    "skills": [],
+    "attackEffect": {
+      "path": "assets/attackEffects/bokjujok/attack.png",
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 4,
@@ -138,32 +325,95 @@ window.HOUHOU_CHARACTER_DATA = [
     "projectileSpeed": 620,
     "frameSize": 96,
     "spritePath": "assets/characters/eungae/",
-    "effectPath": "assets/effects/eungae/attack.png",
-    "effectFrames": 5,
     "gachaRate": 10,
     "attackMethod": "입에서 사탕을 뱉음",
     "feature": "사탕 투사체",
     "animations": {
       "idle": 2,
-      "walk": 4,
+      "walk": 5,
       "attack": 3,
       "hit": 1,
-      "dead": 2
+      "dead": 2,
+      "win": 4
     },
-    "soundPath": "assets/sounds/eungae/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 2,
     "gridAttackRange": 6,
     "gridBattleRule": "30_columns_full_engine",
     "projectileSpeedCells": 8,
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "projectileFrames": 1,
     "projectileStartFrame": 0,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 140,
+      "attack": 20,
+      "defense": 10,
+      "attackSpeed": 2,
+      "attackArea": 60,
+      "attackRange": 6,
+      "moveSpeed": 2,
+      "bodyRadius": 36,
+      "stopGap": 16,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 6
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": null,
+      "attackMethod": "입에서 사탕을 뱉음",
+      "feature": "사탕 투사체"
+    },
+    "assets": {
+      "spritePath": "assets/characters/eungae/",
+      "soundPath": null,
+      "projectilePath": "assets/projectiles/eungae/candy.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/eungae/candy.png",
+      "speed": 620,
+      "speedCells": 8,
+      "frames": 1,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "straight",
+      "scale": 1,
+      "width": 96,
+      "height": 96,
+      "spawnX": 46,
+      "spawnY": 24,
+      "targetX": -18,
+      "targetY": 24,
+      "arcHeight": 0,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/eungae/hit.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 96,
+      "height": 96,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   },
   {
     "id": 10,
@@ -188,8 +438,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "projectileFrames": 5,
     "frameSize": 96,
     "spritePath": "assets/characters/fire_spirit/",
-    "effectPath": "assets/effects/fire_spirit/attack.png",
-    "effectFrames": 5,
     "soundPath": "assets/sounds/fire_spirit/",
     "gachaRate": 10,
     "attackMethod": "불꽃을 손으로 쏴서 지면을 불태운다.",
@@ -205,12 +453,77 @@ window.HOUHOU_CHARACTER_DATA = [
     "aiType": "projectile",
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "none_fire_spirit_v0.6.5",
-    "effectStartFrame": 1,
-    "effectFrameWidth": 96,
     "projectileStartFrame": 1,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2.5
+    "critDamageMax": 2.5,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 120,
+      "attack": 30,
+      "defense": 60,
+      "attackSpeed": 2,
+      "attackArea": 5,
+      "attackRange": 10,
+      "moveSpeed": 2,
+      "bodyRadius": 56,
+      "stopGap": 18,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 10
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": "projectile",
+      "attackMethod": "불꽃을 손으로 쏴서 지면을 불태운다.",
+      "feature": "지면 불꽃 공격"
+    },
+    "assets": {
+      "spritePath": "assets/characters/fire_spirit/",
+      "soundPath": "assets/sounds/fire_spirit/",
+      "projectilePath": "assets/projectiles/fire_spirit/fire_ground.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/fire_spirit/fire_ground.png",
+      "speed": null,
+      "speedCells": 8,
+      "frames": 5,
+      "startFrame": 1,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1,
+      "width": 105,
+      "height": 52,
+      "spawnX": 46,
+      "spawnY": -58,
+      "targetX": -18,
+      "targetY": 35,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/fire_spirit/hit.png",
+      "frames": 5,
+      "startFrame": 1,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 190,
+      "height": 62,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   },
   {
     "id": 3,
@@ -231,8 +544,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "frameSize": 96,
     "spritePath": "assets/characters/gomangi/",
-    "effectPath": "assets/effects/gomangi/attack.png",
-    "effectFrames": 5,
     "gachaRate": 10,
     "attackMethod": "주먹을 위에서 아래로 내려친다",
     "feature": "피해 10% 감소",
@@ -243,16 +554,68 @@ window.HOUHOU_CHARACTER_DATA = [
       "hit": 1,
       "dead": 2
     },
-    "soundPath": "assets/sounds/gomangi/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 2,
     "gridAttackRange": 2,
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 180,
+      "attack": 20,
+      "defense": 50,
+      "attackSpeed": 1,
+      "attackArea": 45,
+      "attackRange": 2,
+      "moveSpeed": 2,
+      "bodyRadius": 64,
+      "stopGap": 16,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": null,
+      "attackMethod": "주먹을 위에서 아래로 내려친다",
+      "feature": "피해 10% 감소"
+    },
+    "assets": {
+      "spritePath": "assets/characters/gomangi/",
+      "soundPath": null,
+      "projectilePath": null
+    },
+    "skills": [
+      {
+        "type": "damage_reduction",
+        "value": 0.1
+      }
+    ],
+    "attackEffect": {
+      "path": "assets/attackEffects/gomangi/attack.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 7,
@@ -272,8 +635,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "frameSize": 96,
     "spritePath": "assets/characters/jjabbeorin/",
-    "effectPath": "assets/effects/jjabbeorin/attack.png",
-    "effectFrames": 6,
     "gachaRate": 10,
     "attackMethod": "손등에 튀어나온 칼날손톱으로 공격",
     "feature": "칼날손톱 공격",
@@ -285,16 +646,63 @@ window.HOUHOU_CHARACTER_DATA = [
       "dead": 2
     },
     "aiType": "rush",
-    "soundPath": "assets/sounds/jjabbeorin/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 3.5,
     "gridAttackRange": 2,
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 120,
+      "attack": 25,
+      "defense": 50,
+      "attackSpeed": 4,
+      "attackArea": 45,
+      "attackRange": 2,
+      "moveSpeed": 3.5,
+      "bodyRadius": 48,
+      "stopGap": 16,
+      "gridMoveSpeed": 3.5,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": "rush",
+      "attackMethod": "손등에 튀어나온 칼날손톱으로 공격",
+      "feature": "칼날손톱 공격"
+    },
+    "assets": {
+      "spritePath": "assets/characters/jjabbeorin/",
+      "soundPath": null,
+      "projectilePath": null
+    },
+    "skills": [],
+    "attackEffect": {
+      "path": "assets/attackEffects/jjabbeorin/attack.png",
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 11,
@@ -319,8 +727,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "projectileFrames": 4,
     "frameSize": 96,
     "spritePath": "assets/characters/lightning_spirit/",
-    "effectPath": "assets/effects/lightning_spirit/attack.png",
-    "effectFrames": 4,
     "soundPath": "assets/sounds/lightning_spirit/",
     "gachaRate": 10,
     "attackMethod": "번개를 손으로 쏴서 꿰뚫는다",
@@ -335,13 +741,78 @@ window.HOUHOU_CHARACTER_DATA = [
     },
     "aiType": "projectile",
     "gridBattleRule": "30_columns_full_engine",
-    "rangeMultiplierApplied": "none_lightning_spirit_v0.8.5",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
+    "rangeMultiplierApplied": "none_lightning_spirit_v0.8.26_json_split",
     "projectileStartFrame": 0,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2.5
+    "critDamageMax": 2.5,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 120,
+      "attack": 35,
+      "defense": 60,
+      "attackSpeed": 2,
+      "attackArea": 8,
+      "attackRange": 10,
+      "moveSpeed": 2,
+      "bodyRadius": 56,
+      "stopGap": 18,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 10
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": "projectile",
+      "attackMethod": "번개를 손으로 쏴서 꿰뚫는다",
+      "feature": "원거리 번개 공격"
+    },
+    "assets": {
+      "spritePath": "assets/characters/lightning_spirit/",
+      "soundPath": "assets/sounds/lightning_spirit/",
+      "projectilePath": "assets/projectiles/lightning_spirit/lightning_bolt.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/lightning_spirit/lightning_bolt.png",
+      "speed": null,
+      "speedCells": 10,
+      "frames": 4,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1,
+      "width": 105,
+      "height": 52,
+      "spawnX": 46,
+      "spawnY": -58,
+      "targetX": -18,
+      "targetY": 35,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/lightning_spirit/hit.png",
+      "frames": 4,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 190,
+      "height": 62,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   },
   {
     "id": 12,
@@ -366,8 +837,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "extraHitAtk": 20,
     "frameSize": 96,
     "spritePath": "assets/characters/little_spirit/",
-    "effectPath": "assets/effects/little_spirit/attack.png",
-    "effectFrames": 6,
     "soundPath": "assets/sounds/little_spirit/",
     "gachaRate": 10,
     "attackMethod": "공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.",
@@ -383,10 +852,68 @@ window.HOUHOU_CHARACTER_DATA = [
     "aiType": "rush",
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "none_little_spirit_v0.8.11_speed4_grid_removed",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 3
+    "critDamageMax": 3,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 100,
+      "attack": 40,
+      "defense": 50,
+      "attackSpeed": 2,
+      "attackArea": 5,
+      "attackRange": 5,
+      "moveSpeed": 4,
+      "bodyRadius": 36,
+      "stopGap": 14,
+      "gridMoveSpeed": 4,
+      "gridAttackRange": 5
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 3
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": "rush",
+      "attackMethod": "공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.",
+      "feature": "15% 흡혈, 50% 확률 2타"
+    },
+    "assets": {
+      "spritePath": "assets/characters/little_spirit/",
+      "soundPath": "assets/sounds/little_spirit/",
+      "projectilePath": null
+    },
+    "skills": [
+      {
+        "type": "lifesteal",
+        "value": 0.15
+      },
+      {
+        "type": "double_attack",
+        "chance": 0.5,
+        "damage": 20
+      }
+    ],
+    "attackEffect": {
+      "path": "assets/attackEffects/little_spirit/attack.png",
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 2,
@@ -408,8 +935,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "projectileSpeed": 520,
     "frameSize": 96,
     "spritePath": "assets/characters/meongdungi/",
-    "effectPath": "assets/effects/meongdungi/attack.png",
-    "effectFrames": 5,
     "gachaRate": 10,
     "attackMethod": "입에서 돌맹이가 나옴",
     "feature": "돌멩이 투사체",
@@ -420,20 +945,84 @@ window.HOUHOU_CHARACTER_DATA = [
       "hit": 1,
       "dead": 2
     },
-    "soundPath": "assets/sounds/meongdungi/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 2,
     "gridAttackRange": 2,
     "gridBattleRule": "30_columns_full_engine",
     "projectileSpeedCells": 8,
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "projectileFrames": 1,
     "projectileStartFrame": 0,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 180,
+      "attack": 20,
+      "defense": 20,
+      "attackSpeed": 1,
+      "attackArea": 60,
+      "attackRange": 2,
+      "moveSpeed": 2,
+      "bodyRadius": 48,
+      "stopGap": 16,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": null,
+      "attackMethod": "입에서 돌맹이가 나옴",
+      "feature": "돌멩이 투사체"
+    },
+    "assets": {
+      "spritePath": "assets/characters/meongdungi/",
+      "soundPath": null,
+      "projectilePath": "assets/projectiles/meongdungi/stone.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/meongdungi/stone.png",
+      "speed": 520,
+      "speedCells": 8,
+      "frames": 1,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1,
+      "width": 105,
+      "height": 52,
+      "spawnX": 46,
+      "spawnY": -58,
+      "targetX": -18,
+      "targetY": 35,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/meongdungi/hit.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 190,
+      "height": 62,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   },
   {
     "id": 1,
@@ -453,8 +1042,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "frameSize": 96,
     "spritePath": "assets/characters/normal_man/",
-    "effectPath": "assets/effects/normal_man/attack.png",
-    "effectFrames": 5,
     "animations": {
       "idle": 2,
       "walk": 4,
@@ -462,18 +1049,81 @@ window.HOUHOU_CHARACTER_DATA = [
       "hit": 1,
       "dead": 2
     },
-    "soundPath": "assets/sounds/normal_man/",
     "gridMovementRule": "screen_width_30_cells",
     "gachaRate": 10,
     "gridMoveSpeed": 2,
     "gridAttackRange": 2,
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "critDamageMin": 1.5,
     "critDamageMax": 2,
-    "feature": "기본 근거리"
+    "feature": "기본 근거리",
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 180,
+      "attack": 20,
+      "defense": 20,
+      "attackSpeed": 1,
+      "attackArea": 45,
+      "attackRange": 2,
+      "moveSpeed": 2,
+      "bodyRadius": 48,
+      "stopGap": 16,
+      "gridMoveSpeed": 2,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": null,
+      "attackMethod": "",
+      "feature": "기본 근거리",
+      "transform": {
+        "target": "awakened_normal_man",
+        "hpBelow": 0.5,
+        "chance": 0.5,
+        "text": "각성",
+        "once": true,
+        "preserveHpRatio": true
+      }
+    },
+    "assets": {
+      "spritePath": "assets/characters/normal_man/",
+      "soundPath": null,
+      "projectilePath": null
+    },
+    "skills": [],
+    "attackEffect": {
+      "path": "assets/attackEffects/normal_man/attack.png",
+      "frames": 5,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    },
+    "transform": {
+      "target": "awakened_normal_man",
+      "hpBelow": 0.5,
+      "chance": 0.5,
+      "text": "각성",
+      "once": true,
+      "preserveHpRatio": true
+    }
   },
   {
     "id": 13,
@@ -495,11 +1145,8 @@ window.HOUHOU_CHARACTER_DATA = [
     "attackType": "melee",
     "paralyzeChance": 1.0,
     "paralyzeDuration": 1.0,
-    "paralyzeCooldownAfter": 2.0,
     "frameSize": 96,
     "spritePath": "assets/characters/slimecute/",
-    "effectPath": "assets/effects/slimecute/attack.png",
-    "effectFrames": 4,
     "soundPath": "assets/sounds/slimecute/",
     "gachaRate": 10,
     "attackMethod": "공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.",
@@ -515,10 +1162,66 @@ window.HOUHOU_CHARACTER_DATA = [
     "aiType": "rush",
     "gridBattleRule": "30_columns_full_engine",
     "rangeMultiplierApplied": "none_slimecute_v0.8.15_grid_removed_paralyze_cooldown",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
+    "paralyzeCooldownAfter": 2.0,
     "critDamageMin": 1.5,
-    "critDamageMax": 2
+    "critDamageMax": 2,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 85,
+      "attack": 90,
+      "defense": 20,
+      "attackSpeed": 2,
+      "attackArea": 2,
+      "attackRange": 2,
+      "moveSpeed": 3,
+      "bodyRadius": 42,
+      "stopGap": 14,
+      "gridMoveSpeed": 3,
+      "gridAttackRange": 2
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "melee",
+      "aiType": "rush",
+      "attackMethod": "공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.",
+      "feature": "1초 마비, 2초 재마비 방지"
+    },
+    "assets": {
+      "spritePath": "assets/characters/slimecute/",
+      "soundPath": "assets/sounds/slimecute/",
+      "projectilePath": null
+    },
+    "skills": [
+      {
+        "type": "paralyze",
+        "chance": 1.0,
+        "duration": 1.0,
+        "cooldownAfter": 2.0
+      }
+    ],
+    "attackEffect": {
+      "path": "assets/attackEffects/slimecute/attack.png",
+      "frames": 4,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "centerEffect": false,
+      "scale": 1,
+      "width": 120,
+      "height": 120,
+      "offsetX": 0,
+      "offsetY": -25,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "playOnce": true,
+      "enabled": true
+    }
   },
   {
     "id": 8,
@@ -541,8 +1244,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "projectileFrames": 6,
     "frameSize": 96,
     "spritePath": "assets/characters/storm_spirit/",
-    "effectPath": "assets/effects/storm_spirit/attack.png",
-    "effectFrames": 6,
     "gachaRate": 10,
     "attackMethod": "강력한 회오리를 발사",
     "feature": "회오리 발사",
@@ -554,19 +1255,83 @@ window.HOUHOU_CHARACTER_DATA = [
       "dead": 2
     },
     "aiType": "projectile",
-    "soundPath": "assets/sounds/storm_spirit/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 3,
     "gridAttackRange": 4,
     "gridBattleRule": "30_columns_full_engine",
     "projectileSpeedCells": 8,
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "projectileStartFrame": 0,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2.5
+    "critDamageMax": 2.5,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 120,
+      "attack": 35,
+      "defense": 80,
+      "attackSpeed": 5,
+      "attackArea": 70,
+      "attackRange": 4,
+      "moveSpeed": 3,
+      "bodyRadius": 56,
+      "stopGap": 18,
+      "gridMoveSpeed": 3,
+      "gridAttackRange": 4
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": "projectile",
+      "attackMethod": "강력한 회오리를 발사",
+      "feature": "회오리 발사"
+    },
+    "assets": {
+      "spritePath": "assets/characters/storm_spirit/",
+      "soundPath": null,
+      "projectilePath": "assets/projectiles/storm_spirit/tornado.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/storm_spirit/tornado.png",
+      "speed": 680,
+      "speedCells": 8,
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1,
+      "width": 105,
+      "height": 52,
+      "spawnX": 46,
+      "spawnY": -58,
+      "targetX": -18,
+      "targetY": 35,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [],
+    "hitEffect": {
+      "path": "assets/hitEffects/storm_spirit/hit.png",
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 190,
+      "height": 62,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   },
   {
     "id": 9,
@@ -590,8 +1355,6 @@ window.HOUHOU_CHARACTER_DATA = [
     "lifeSteal": 0.2,
     "frameSize": 96,
     "spritePath": "assets/characters/vampire_king/",
-    "effectPath": "assets/effects/vampire_king/attack.png",
-    "effectFrames": 6,
     "gachaRate": 10,
     "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
     "feature": "20% 흡혈",
@@ -603,18 +1366,87 @@ window.HOUHOU_CHARACTER_DATA = [
       "dead": 2
     },
     "aiType": "projectile",
-    "soundPath": "assets/sounds/vampire_king/",
     "gridMovementRule": "screen_width_30_cells",
     "gridMoveSpeed": 3,
     "gridAttackRange": 6,
     "gridBattleRule": "30_columns_full_engine",
     "projectileSpeedCells": 8,
     "rangeMultiplierApplied": "x2_v0.6.1",
-    "effectStartFrame": 0,
-    "effectFrameWidth": 96,
     "projectileStartFrame": 0,
     "projectileFrameWidth": 96,
     "critDamageMin": 1.5,
-    "critDamageMax": 2.5
+    "critDamageMax": 2.5,
+    "schemaVersion": "1.0.8-effect-role-clean",
+    "stats": {
+      "hp": 100,
+      "attack": 35,
+      "defense": 50,
+      "attackSpeed": 2,
+      "attackArea": 90,
+      "attackRange": 6,
+      "moveSpeed": 3,
+      "bodyRadius": 56,
+      "stopGap": 18,
+      "gridMoveSpeed": 3,
+      "gridAttackRange": 6
+    },
+    "critical": {
+      "chance": 0.15,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "gacha": {
+      "weight": 10
+    },
+    "combat": {
+      "attackType": "projectile",
+      "aiType": "projectile",
+      "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
+      "feature": "20% 흡혈"
+    },
+    "assets": {
+      "spritePath": "assets/characters/vampire_king/",
+      "soundPath": null,
+      "projectilePath": "assets/projectiles/vampire_king/blood_wave.png"
+    },
+    "projectile": {
+      "path": "assets/projectiles/vampire_king/blood_wave.png",
+      "speed": 580,
+      "speedCells": 8,
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "trajectory": "ground",
+      "scale": 1,
+      "width": 105,
+      "height": 52,
+      "spawnX": 46,
+      "spawnY": -58,
+      "targetX": -18,
+      "targetY": 35,
+      "arcHeight": 80,
+      "enabled": true
+    },
+    "skills": [
+      {
+        "type": "lifesteal",
+        "value": 0.2
+      }
+    ],
+    "hitEffect": {
+      "path": "assets/hitEffects/vampire_king/hit.png",
+      "frames": 6,
+      "startFrame": 0,
+      "frameWidth": 96,
+      "scale": 1,
+      "width": 190,
+      "height": 62,
+      "offsetX": 0,
+      "offsetY": 12,
+      "playOnce": true,
+      "frameSequence": null,
+      "frameOffsets": null,
+      "enabled": true
+    }
   }
 ];

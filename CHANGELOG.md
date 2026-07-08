@@ -1,3 +1,10 @@
+# HouHou Engine v1.0.1
+
+- `data/skill_registry.json` 추가
+- 캐릭터 JSON에서 사용할 공용 스킬 타입 18종 정의
+- `docs/SKILL_REGISTRY.md` 추가
+- 변신 스킬은 targetCharacterId 기반 캐릭터 데이터 교체 방식으로 설계만 반영
+
 # v1.7.1 refactor fix
 
 - Fixed resource loading hang caused by missing combatEffects.js script tag in index.html.
@@ -95,3 +102,47 @@
 - `index.html`에서 `game.bundle.js` 의존 제거
 - 엔진 구조 문서 `docs/ENGINE_STRUCTURE.md` 추가
 - 게임 화면 버전 문구를 `HouHou Engine v1.0.0`으로 변경
+
+
+## v1.0.2 - Auto Character Scan
+
+- GitHub Pages 환경에서 `assets/characters/*/character.json` 자동 스캔 기능 추가
+- 신규 캐릭터 추가 시 `data/character_manifest.json` 수정 부담 완화
+- GitHub API 실패/로컬 실행 시 기존 manifest fallback 유지
+- `docs/AUTO_CHARACTER_SCAN.md` 문서 추가
+
+## v1.0.4_projectile_spawn_effect_hit_json_control
+- `projectile`은 날아가는 투사체 전용으로 정리했습니다.
+- `projectile.trajectory`, `spawnX`, `spawnY`, `targetX`, `targetY`, `arcHeight`, `scale`, `width`, `height`를 character.json에서 제어합니다.
+- `effect`는 투사체/공격이 명중했을 때 표시되는 타격 이펙트 전용으로 정리했습니다.
+- `effect.trajectory` 사용을 제거하고 `effect.offsetX`, `effect.offsetY`, `scale`, `width`, `height`로 제어합니다.
+- `battleActors.js`의 고정 발사 위치와 고정 목표 위치를 JSON 기반으로 변경했습니다.
+- `combatEffects.js`의 지면 trajectory 분기 및 고정 크기 렌더링을 제거했습니다.
+
+## v1.0.5
+- Projectile trajectory handling separated into `PROJECTILE_TRAJECTORY` strategy table in `js/battleActors.js`.
+- Kept JSON-controlled `projectile.trajectory` values: `straight`, `ground`, `arc`, `homing`.
+- Removed inline `if/else` trajectory logic from `Projectile` update/draw flow for easier future trajectory additions.
+
+
+## v1.0.6 effect role reorganization
+- JSON 구조를 projectile / attackEffect / hitEffect로 분리했습니다.
+- projectile: 원거리 캐릭터가 날아가게 하는 투사체입니다.
+- attackEffect: 근접 캐릭터의 공격 순간/공격 모션 이미지입니다.
+- hitEffect: 원거리 투사체 또는 공격이 맞았을 때 상대 위치에 표시되는 타격 이미지입니다.
+- 기존 effect 필드는 하위호환용으로만 유지되며, 신규 캐릭터는 attackEffect 또는 hitEffect를 사용하세요.
+- 폴더 구조를 assets/projectiles, assets/attackEffects, assets/hitEffects 기준으로 정리했습니다.
+
+## v1.0.7 - Transform system
+- character.json의 `transform` 설정 추가
+- 체력 비율 조건 + 확률 기반 변신 지원
+- 변신 시 "각성" 같은 텍스트 출력 지원
+- 걍사람: HP 50% 미만일 때 50% 확률로 각성한 걍사람으로 변신
+
+
+## v1.0.8 effect role clean
+- 기존 `effect` / `effectPath` / `effectFrames` 계열 제거
+- `projectile`, `attackEffect`, `hitEffect`만 사용하도록 JSON/로더 정리
+- 미사용 `assets/effects/` 폴더 및 `*.meta.json` 제거
+- `assetManager.js`, `dataLoader.js`, `characterData.js`, `CharacterManager.js`의 legacy effect 참조 제거
+- 변신 시스템(v1.0.7)은 유지

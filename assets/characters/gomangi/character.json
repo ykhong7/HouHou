@@ -17,8 +17,6 @@
   "attackType": "melee",
   "frameSize": 96,
   "spritePath": "assets/characters/gomangi/",
-  "effectPath": "assets/effects/gomangi/attack.png",
-  "effectFrames": 5,
   "gachaRate": 10,
   "attackMethod": "주먹을 위에서 아래로 내려친다",
   "feature": "피해 10% 감소",
@@ -34,11 +32,9 @@
   "gridAttackRange": 2,
   "gridBattleRule": "30_columns_full_engine",
   "rangeMultiplierApplied": "x2_v0.6.1",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 96,
   "critDamageMin": 1.5,
   "critDamageMax": 2,
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 180,
     "attack": 20,
@@ -68,27 +64,29 @@
   },
   "assets": {
     "spritePath": "assets/characters/gomangi/",
-    "effectPath": "assets/effects/gomangi/attack.png",
     "soundPath": null,
     "projectilePath": null
-  },
-  "effect": {
-    "path": "assets/effects/gomangi/attack.png",
-    "frames": 5,
-    "startFrame": 0,
-    "frameWidth": 96,
-    "centerEffect": false,
-    "anchor": null,
-    "scale": 1,
-    "frameSequence": null,
-    "frameOffsets": null,
-    "hitEffect": false,
-    "hitEffectStart": 0.38
   },
   "skills": [
     {
       "type": "damage_reduction",
       "value": 0.1
     }
-  ]
+  ],
+  "attackEffect": {
+    "path": "assets/attackEffects/gomangi/attack.png",
+    "frames": 5,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "scale": 1,
+    "width": 120,
+    "height": 120,
+    "offsetX": 0,
+    "offsetY": -25,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "playOnce": true,
+    "enabled": true
+  }
 }

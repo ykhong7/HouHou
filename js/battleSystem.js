@@ -6,7 +6,7 @@ class Battle{
  reset(start=false){if(!this.playerKey)return;this.player=new Fighter(this.a.create(this.playerKey),230,1);this.enemy=new Fighter(this.a.create(this.enemyKey),1040,-1);this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();this.nextRoundTimer=0;this.state=start?'approach':'ready';this.running=start;}
  start(){if(!this.playerKey){this.state='select';return;}if(this.state==='finished'&&!this.player.isDead){this.startNextRound();return;}this.reset(true);}
  startNextRound(){if(!this.playerKey||this.player.isDead)return;let keepHp=Math.min(this.player.maxHp,this.player.hp+Math.max(1,Math.round(this.player.maxHp*.2)));this.enemyKey=this.pickNextEnemy();this.player.x=230;this.player.y=505;this.player.dir=1;this.player.hp=keepHp;this.player.isDead=false;this.player.state='idle';this.player.frame=0;this.player.anim=0;this.player.attackTimer=.25;this.player.attackAnimLock=0;this.player.hitTimer=0;this.player.stunTimer=0;this.player.paralyzeCooldown=0;this.player.knock=0;this.player.flash=0;this.enemy=new Fighter(this.a.create(this.enemyKey),1040,-1);this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();this.nextRoundTimer=0;this.state='approach';this.running=true;}
- update(dt){if(!this.playerKey)return;if(!this.running){this.player.update(dt);this.enemy.update(dt);return;}if(this.e.frozen())return;if(this.player.isDead||this.enemy.isDead){if(this.state!=='finished'){this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();if(this.player.isDead){this.lose++;this.streak=0;}else{this.win++;this.streak++;this.nextRoundTimer=0;}let winner=this.player.isDead?this.enemy:this.player;if(winner.animations&&winner.animations.win){winner.state='win';winner.anim=0;winner.frame=0;}if(this.audio)this.audio.system(this.player.isDead?'defeat':'victory');}this.state='finished';this.running=false;this.player.update(dt);this.enemy.update(dt);return;}this.unit(this.player,this.enemy,dt);this.unit(this.enemy,this.player,dt);this.projectiles.forEach(p=>p.update(dt,this.e));this.projectiles=this.projectiles.filter(p=>!p.dead);this.prevent();this.player.update(dt);this.enemy.update(dt);}
+ update(dt){if(!this.playerKey)return;if(!this.running){this.player.update(dt);this.enemy.update(dt);return;}if(this.e.frozen())return;if(this.player.isDead||this.enemy.isDead){if(this.state!=='finished'){this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();if(this.player.isDead){this.lose++;this.streak=0;}else{this.win++;this.streak++;this.nextRoundTimer=0;}let winner=this.player.isDead?this.enemy:this.player;if(winner.animations&&winner.animations.win){winner.state='win';winner.anim=0;winner.frame=0;}if(this.audio)this.audio.system(this.player.isDead?'defeat':'victory');}this.state='finished';this.running=false;this.player.update(dt);this.enemy.update(dt);return;}this.unit(this.player,this.enemy,dt);this.unit(this.enemy,this.player,dt);this.projectiles.forEach(p=>p.update(dt,this.e,this.a));this.projectiles=this.projectiles.filter(p=>!p.dead);this.prevent();this.player.update(dt);this.enemy.update(dt);}
  stop(u,t){
  // 30칸 기준 전투 규칙:
  // 원거리: 공격사거리 칸 안에 들어오면 즉시 정지
@@ -55,7 +55,9 @@ calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.
     this.e.spawnHeal(u.x,u.y,heal);
    }
    if(this.audio)this.audio.hit(t,r.crit);
-   this.e.spawn(t,u,final,r.crit);
+   this.e.spawnAttackEffect(t,u,final,r.crit);
+   if(t.tryTransform)t.tryTransform(this.a,this.e);
+   if(u.hitEffect&&u.hitEffect.enabled)this.e.spawnHitEffect(t,u,final,r.crit,false);
 
    // 꼬마정령: 공격 시 50% 확률로 2회 공격. 2타는 공격력 20으로 별도 계산.
    if(u.extraHitChance&&Math.random()<u.extraHitChance&&!t.isDead&&t.hp>0){
@@ -70,7 +72,9 @@ calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.
      this.e.spawnHeal(u.x,u.y,heal2);
     }
     if(this.audio)this.audio.hit(t,crit2);
-    this.e.spawn(t,u,final2,crit2);
+    this.e.spawnAttackEffect(t,u,final2,crit2);
+    if(t.tryTransform)t.tryTransform(this.a,this.e);
+    if(u.hitEffect&&u.hitEffect.enabled)this.e.spawnHitEffect(t,u,final2,crit2,false);
    }
   }
  }

@@ -1,0 +1,218 @@
+{
+  "version": "1.0.1",
+  "description": "HouHou Engine에서 character.json의 skills 배열로 사용할 공용 스킬 정의 목록입니다. 현재 버전은 등록/문서화용이며, 실제 전투 적용 로직은 단계적으로 SkillManager에 연결합니다.",
+  "commonParameters": {
+    "type": "스킬 고유 이름",
+    "trigger": "발동 시점: onSpawn, onBattleStart, onAttack, onHit, onDamageTaken, onKill, onDeath, onWin, onInterval, onHpBelow",
+    "chance": "발동 확률. 0~1 또는 0~100 입력 가능",
+    "cooldown": "재사용 대기시간(초)",
+    "duration": "지속시간(초)",
+    "value": "스킬 기본 수치. 스킬별 의미가 다름",
+    "target": "self, enemy, allies, enemies"
+  },
+  "triggers": {
+    "onSpawn": "캐릭터 생성 시",
+    "onBattleStart": "전투 시작 시",
+    "onAttack": "공격 동작 시작 시",
+    "onHit": "공격 적중 시",
+    "onDamageTaken": "피해를 받을 때",
+    "onKill": "적 처치 시",
+    "onDeath": "사망 시",
+    "onWin": "승리 시",
+    "onInterval": "일정 시간마다",
+    "onHpBelow": "HP가 지정 비율 이하일 때"
+  },
+  "skills": {
+    "lifesteal": {
+      "nameKo": "흡혈",
+      "description": "준 피해량의 일부를 자신의 HP로 회복합니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "value": "흡혈 비율. 예: 0.15 = 피해량의 15% 회복"
+      },
+      "example": { "type": "lifesteal", "trigger": "onHit", "value": 0.15 }
+    },
+    "double_attack": {
+      "nameKo": "추가 공격",
+      "description": "확률적으로 추가 타격을 발생시킵니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "chance": "추가 공격 발동 확률",
+        "damage": "추가 공격 고정 피해량",
+        "damageRatio": "기본 공격력 대비 추가 피해 비율"
+      },
+      "example": { "type": "double_attack", "trigger": "onHit", "chance": 0.5, "damageRatio": 0.5 }
+    },
+    "paralyze": {
+      "nameKo": "마비",
+      "description": "상대를 일정 시간 행동 불가 상태로 만듭니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "chance": "마비 발동 확률",
+        "duration": "마비 지속시간(초)",
+        "cooldownAfter": "마비 종료 후 면역시간(초)"
+      },
+      "example": { "type": "paralyze", "trigger": "onHit", "chance": 1, "duration": 1, "cooldownAfter": 2 }
+    },
+    "burn": {
+      "nameKo": "지속 화상 피해",
+      "description": "상대에게 일정 시간 동안 화상 지속 피해를 줍니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "chance": "화상 발동 확률",
+        "duration": "화상 지속시간(초)",
+        "damagePerSecond": "초당 피해량",
+        "damageRatio": "공격력 대비 초당 피해 비율"
+      },
+      "example": { "type": "burn", "trigger": "onHit", "chance": 0.3, "duration": 5, "damageRatio": 0.1 }
+    },
+    "poison": {
+      "nameKo": "지속 독 피해",
+      "description": "상대에게 일정 시간 동안 독 지속 피해를 줍니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "chance": "독 발동 확률",
+        "duration": "독 지속시간(초)",
+        "damagePerSecond": "초당 피해량",
+        "damageRatio": "공격력 대비 초당 피해 비율"
+      },
+      "example": { "type": "poison", "trigger": "onHit", "chance": 0.25, "duration": 6, "damagePerSecond": 5 }
+    },
+    "shield": {
+      "nameKo": "보호막",
+      "description": "일정 피해를 대신 흡수하는 보호막을 생성합니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "value": "보호막 흡수량",
+        "duration": "보호막 지속시간(초). 0이면 전투 중 유지"
+      },
+      "example": { "type": "shield", "trigger": "onBattleStart", "value": 50, "duration": 0 }
+    },
+    "damage_reflect": {
+      "nameKo": "데미지 반사",
+      "description": "받은 피해의 일부를 공격자에게 되돌려줍니다.",
+      "recommendedTrigger": "onDamageTaken",
+      "parameters": {
+        "value": "반사 비율. 예: 0.2 = 받은 피해의 20% 반사"
+      },
+      "example": { "type": "damage_reflect", "trigger": "onDamageTaken", "value": 0.2 }
+    },
+    "critical_boost": {
+      "nameKo": "치명타 확률/배율 증가",
+      "description": "치명타 확률 또는 치명타 배율을 증가시킵니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "critChance": "추가 치명타 확률",
+        "critMultiplierMin": "치명타 최소 배율 증가/변경값",
+        "critMultiplierMax": "치명타 최대 배율 증가/변경값",
+        "duration": "지속시간(초). 0이면 전투 중 유지"
+      },
+      "example": { "type": "critical_boost", "trigger": "onBattleStart", "critChance": 0.15, "critMultiplierMax": 3, "duration": 0 }
+    },
+    "attack_boost": {
+      "nameKo": "공격력 증가",
+      "description": "공격력을 증가시킵니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "value": "공격력 증가량 또는 증가 비율",
+        "mode": "flat 또는 percent",
+        "duration": "지속시간(초). 0이면 전투 중 유지"
+      },
+      "example": { "type": "attack_boost", "trigger": "onBattleStart", "mode": "percent", "value": 0.2, "duration": 0 }
+    },
+    "defense_boost": {
+      "nameKo": "방어력 증가",
+      "description": "방어력을 증가시킵니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "value": "방어력 증가량 또는 증가 비율",
+        "mode": "flat 또는 percent",
+        "duration": "지속시간(초). 0이면 전투 중 유지"
+      },
+      "example": { "type": "defense_boost", "trigger": "onBattleStart", "mode": "percent", "value": 0.2, "duration": 0 }
+    },
+    "speed_boost": {
+      "nameKo": "이동/공격속도 증가",
+      "description": "이동속도 또는 공격속도를 증가시킵니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "moveSpeed": "이동속도 증가량 또는 비율",
+        "attackSpeed": "공격속도 증가량 또는 비율",
+        "mode": "flat 또는 percent",
+        "duration": "지속시간(초). 0이면 전투 중 유지"
+      },
+      "example": { "type": "speed_boost", "trigger": "onBattleStart", "mode": "percent", "moveSpeed": 0.2, "attackSpeed": 0.1, "duration": 0 }
+    },
+    "heal_on_win": {
+      "nameKo": "승리 후 회복",
+      "description": "승리 시 최대 HP 기준으로 HP를 회복합니다.",
+      "recommendedTrigger": "onWin",
+      "parameters": {
+        "value": "최대 HP 기준 회복 비율. 예: 0.2 = 최대 HP의 20% 회복"
+      },
+      "example": { "type": "heal_on_win", "trigger": "onWin", "value": 0.2 }
+    },
+    "knockback": {
+      "nameKo": "넉백",
+      "description": "적을 뒤로 밀어냅니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "chance": "넉백 발동 확률",
+        "distance": "밀어낼 거리"
+      },
+      "example": { "type": "knockback", "trigger": "onHit", "chance": 0.35, "distance": 80 }
+    },
+    "splash_damage": {
+      "nameKo": "범위 피해",
+      "description": "대상 주변 적에게 추가 피해를 줍니다.",
+      "recommendedTrigger": "onHit",
+      "parameters": {
+        "radius": "범위 반경",
+        "damageRatio": "기본 피해 대비 범위 피해 비율"
+      },
+      "example": { "type": "splash_damage", "trigger": "onHit", "radius": 120, "damageRatio": 0.5 }
+    },
+    "pierce": {
+      "nameKo": "관통 공격",
+      "description": "투사체 또는 공격이 여러 대상을 관통합니다.",
+      "recommendedTrigger": "onAttack",
+      "parameters": {
+        "maxTargets": "최대 관통 대상 수",
+        "infinite": "true이면 제한 없이 관통"
+      },
+      "example": { "type": "pierce", "trigger": "onAttack", "maxTargets": 3 }
+    },
+    "stun_immunity": {
+      "nameKo": "마비 면역",
+      "description": "마비 또는 기절 계열 상태이상을 무시합니다.",
+      "recommendedTrigger": "onBattleStart",
+      "parameters": {
+        "duration": "면역 지속시간(초). 0이면 전투 중 유지",
+        "permanent": "true이면 전투 중 항상 면역"
+      },
+      "example": { "type": "stun_immunity", "trigger": "onBattleStart", "permanent": true }
+    },
+    "revive": {
+      "nameKo": "1회 부활",
+      "description": "사망 시 한 번 부활합니다.",
+      "recommendedTrigger": "onDeath",
+      "parameters": {
+        "hpPercent": "부활 후 회복할 최대 HP 비율",
+        "once": "true이면 전투 중 1회만 발동"
+      },
+      "example": { "type": "revive", "trigger": "onDeath", "hpPercent": 0.3, "once": true }
+    },
+    "transformation": {
+      "nameKo": "변신",
+      "description": "조건 만족 시 다른 캐릭터 데이터를 불러와 현재 캐릭터를 교체합니다. 현재 버전에서는 설계 등록용입니다.",
+      "recommendedTrigger": "onHpBelow",
+      "parameters": {
+        "targetCharacterId": "변신할 캐릭터 key",
+        "hpThreshold": "발동 HP 비율. 예: 0.3 = HP 30% 이하",
+        "keepHpRatio": "true이면 변신 전 현재 HP 비율을 변신 후에도 유지",
+        "once": "true이면 전투 중 1회만 발동"
+      },
+      "example": { "type": "transformation", "trigger": "onHpBelow", "hpThreshold": 0.3, "targetCharacterId": "awakened_normal_man", "keepHpRatio": true, "once": true }
+    }
+  }
+}

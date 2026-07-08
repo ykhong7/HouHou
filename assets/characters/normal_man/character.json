@@ -16,8 +16,6 @@
   "attackType": "melee",
   "frameSize": 96,
   "spritePath": "assets/characters/normal_man/",
-  "effectPath": "assets/effects/normal_man/attack.png",
-  "effectFrames": 5,
   "animations": {
     "idle": 2,
     "walk": 4,
@@ -31,12 +29,10 @@
   "gridAttackRange": 2,
   "gridBattleRule": "30_columns_full_engine",
   "rangeMultiplierApplied": "x2_v0.6.1",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 96,
   "critDamageMin": 1.5,
   "critDamageMax": 2,
   "feature": "기본 근거리",
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 180,
     "attack": 20,
@@ -62,26 +58,44 @@
     "attackType": "melee",
     "aiType": null,
     "attackMethod": "",
-    "feature": "기본 근거리"
+    "feature": "기본 근거리",
+    "transform": {
+      "target": "awakened_normal_man",
+      "hpBelow": 0.5,
+      "chance": 0.5,
+      "text": "각성",
+      "once": true,
+      "preserveHpRatio": true
+    }
   },
   "assets": {
     "spritePath": "assets/characters/normal_man/",
-    "effectPath": "assets/effects/normal_man/attack.png",
     "soundPath": null,
     "projectilePath": null
   },
-  "effect": {
-    "path": "assets/effects/normal_man/attack.png",
+  "skills": [],
+  "attackEffect": {
+    "path": "assets/attackEffects/normal_man/attack.png",
     "frames": 5,
     "startFrame": 0,
     "frameWidth": 96,
     "centerEffect": false,
-    "anchor": null,
     "scale": 1,
+    "width": 120,
+    "height": 120,
+    "offsetX": 0,
+    "offsetY": -25,
     "frameSequence": null,
     "frameOffsets": null,
-    "hitEffect": false,
-    "hitEffectStart": 0.38
+    "playOnce": true,
+    "enabled": true
   },
-  "skills": []
+  "transform": {
+    "target": "awakened_normal_man",
+    "hpBelow": 0.5,
+    "chance": 0.5,
+    "text": "각성",
+    "once": true,
+    "preserveHpRatio": true
+  }
 }

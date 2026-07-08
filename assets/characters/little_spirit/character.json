@@ -21,8 +21,6 @@
   "extraHitAtk": 20,
   "frameSize": 96,
   "spritePath": "assets/characters/little_spirit/",
-  "effectPath": "assets/effects/little_spirit/attack.png",
-  "effectFrames": 6,
   "soundPath": "assets/sounds/little_spirit/",
   "gachaRate": 10,
   "attackMethod": "공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.",
@@ -38,11 +36,9 @@
   "aiType": "rush",
   "gridBattleRule": "30_columns_full_engine",
   "rangeMultiplierApplied": "none_little_spirit_v0.8.11_speed4_grid_removed",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 96,
   "critDamageMin": 1.5,
   "critDamageMax": 3,
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 100,
     "attack": 40,
@@ -72,22 +68,8 @@
   },
   "assets": {
     "spritePath": "assets/characters/little_spirit/",
-    "effectPath": "assets/effects/little_spirit/attack.png",
     "soundPath": "assets/sounds/little_spirit/",
     "projectilePath": null
-  },
-  "effect": {
-    "path": "assets/effects/little_spirit/attack.png",
-    "frames": 6,
-    "startFrame": 0,
-    "frameWidth": 96,
-    "centerEffect": false,
-    "anchor": null,
-    "scale": 1,
-    "frameSequence": null,
-    "frameOffsets": null,
-    "hitEffect": false,
-    "hitEffectStart": 0.38
   },
   "skills": [
     {
@@ -99,5 +81,21 @@
       "chance": 0.5,
       "damage": 20
     }
-  ]
+  ],
+  "attackEffect": {
+    "path": "assets/attackEffects/little_spirit/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "scale": 1,
+    "width": 120,
+    "height": 120,
+    "offsetX": 0,
+    "offsetY": -25,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "playOnce": true,
+    "enabled": true
+  }
 }

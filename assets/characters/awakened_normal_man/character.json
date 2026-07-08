@@ -16,8 +16,6 @@
   "attackType": "melee",
   "frameSize": 96,
   "spritePath": "assets/characters/awakened_normal_man/",
-  "effectPath": "assets/effects/awakened_normal_man/attack.png",
-  "effectFrames": 5,
   "gachaRate": 10,
   "attackMethod": "몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.",
   "feature": "중심 각성 이펙트 후 전방 방출",
@@ -34,30 +32,17 @@
   "gridAttackRange": 4,
   "gridBattleRule": "30_columns_full_engine",
   "rangeMultiplierApplied": "x2_v0.6.1_v0.8.22_awakened_effect5_forward",
-  "effectStartFrame": 0,
-  "effectFrameWidth": 192,
-  "centerEffect": true,
-  "effectAnchor": "attacker_center",
-  "effectScale": 1.35,
-  "effectFrameSequence": [
-    0,
-    1,
-    2,
-    3,
-    4
-  ],
-  "effectFrameOffsets": [
-    0,
-    20,
-    40,
-    40,
-    96
-  ],
-  "hitEffect": true,
-  "hitEffectStart": 0.6,
+  "hitEffect": {
+    "path": null,
+    "enabled": true,
+    "style": "burst",
+    "start": 0.6,
+    "offsetX": 0,
+    "offsetY": -48
+  },
   "critDamageMin": 1.5,
   "critDamageMax": 3,
-  "schemaVersion": "1.0.0-data-driven",
+  "schemaVersion": "1.0.8-effect-role-clean",
   "stats": {
     "hp": 200,
     "attack": 35,
@@ -87,18 +72,22 @@
   },
   "assets": {
     "spritePath": "assets/characters/awakened_normal_man/",
-    "effectPath": "assets/effects/awakened_normal_man/attack.png",
     "soundPath": null,
     "projectilePath": null
   },
-  "effect": {
-    "path": "assets/effects/awakened_normal_man/attack.png",
+  "skills": [],
+  "attackEffect": {
+    "path": "assets/attackEffects/awakened_normal_man/attack.png",
     "frames": 5,
     "startFrame": 0,
     "frameWidth": 192,
     "centerEffect": true,
     "anchor": "attacker_center",
     "scale": 1.35,
+    "width": 120,
+    "height": 120,
+    "offsetX": 0,
+    "offsetY": -25,
     "frameSequence": [
       0,
       1,
@@ -113,8 +102,7 @@
       40,
       96
     ],
-    "hitEffect": true,
-    "hitEffectStart": 0.6
-  },
-  "skills": []
+    "playOnce": true,
+    "enabled": true
+  }
 }
