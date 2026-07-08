@@ -1,4 +1,4 @@
-// v1.0.8: CharacterManager helper aligned with projectile / attackEffect / hitEffect schema.
+// v1.0.9: CharacterManager helper aligned with projectile / attackEffect / hitEffect schema.
 class CharacterManager{
  static asNumber(v,def=0){const n=Number(v);return Number.isFinite(n)?n:def;}
  static normalizeEffectConfig(src,defaults={}){

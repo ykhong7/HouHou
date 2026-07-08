@@ -65,7 +65,8 @@
       "chance": 0.5,
       "text": "각성",
       "once": true,
-      "preserveHpRatio": true
+      "preserveHpRatio": true,
+      "healAfterTransformRatio": 0.3
     }
   },
   "assets": {
@@ -93,9 +94,10 @@
   "transform": {
     "target": "awakened_normal_man",
     "hpBelow": 0.5,
-    "chance": 0.5,
+    "chance": 0.7,
     "text": "각성",
     "once": true,
-    "preserveHpRatio": true
+    "preserveHpRatio": true,
+    "healAfterTransformRatio": 0.3
   }
 }

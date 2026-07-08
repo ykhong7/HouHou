@@ -1,4 +1,4 @@
-// v1.0.8 Data-Driven loader
+// v1.0.9 Data-Driven loader
 // character.json 기준 역할:
 // projectile   = 원거리 캐릭터의 날아가는 투사체
 // attackEffect = 근접 캐릭터의 공격 중 표시 이미지
@@ -82,6 +82,8 @@ function normalizeCharacterData(raw){
    text:tf.text??'각성',
    once:Boolean(tf.once??true),
    preserveHpRatio:Boolean(tf.preserveHpRatio??true),
+   healAfterTransformRatio:asNumber(tf.healAfterTransformRatio??tf.healRatio??tf.recoverHpRatio,0),
+   healAfterTransform:asNumber(tf.healAfterTransform??tf.healHp??tf.recoverHp,0),
    resetOnRound:Boolean(tf.resetOnRound??true)
   };
   if(d.transform.hpBelow>1)d.transform.hpBelow/=100;

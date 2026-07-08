@@ -1,4 +1,4 @@
-// v1.0.8 fallback character data generated from assets/characters/*/character.json
+// v1.0.9 fallback character data generated from assets/characters/*/character.json
 window.HOUHOU_CHARACTER_DATA = [
   {
     "id": 14,
@@ -16,7 +16,7 @@ window.HOUHOU_CHARACTER_DATA = [
     "stopGap": 16,
     "critRate": 0.15,
     "attackType": "projectile",
-    "projectilePath": "assets/projectiles/awakened_eungae/candy.png",
+    "projectilePath": "assets/projectiles/awakened_eungae/Pacifier.png",
     "projectileSpeed": 620,
     "frameSize": 96,
     "spritePath": "assets/characters/awakened_eungae/",
@@ -1091,7 +1091,8 @@ window.HOUHOU_CHARACTER_DATA = [
         "chance": 0.5,
         "text": "각성",
         "once": true,
-        "preserveHpRatio": true
+        "preserveHpRatio": true,
+        "healAfterTransformRatio": 0.3
       }
     },
     "assets": {
@@ -1122,7 +1123,8 @@ window.HOUHOU_CHARACTER_DATA = [
       "chance": 0.5,
       "text": "각성",
       "once": true,
-      "preserveHpRatio": true
+      "preserveHpRatio": true,
+      "healAfterTransformRatio": 0.3
     }
   },
   {

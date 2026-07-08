@@ -1,4 +1,4 @@
-// v1.0.8: Asset loading. Legacy generic effect removed.
+// v1.0.9: Asset loading. Legacy generic effect removed.
 class Assets{
  async load(){
   const db=await loadCharacterDatabase();

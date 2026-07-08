@@ -146,3 +146,10 @@
 - 미사용 `assets/effects/` 폴더 및 `*.meta.json` 제거
 - `assetManager.js`, `dataLoader.js`, `characterData.js`, `CharacterManager.js`의 legacy effect 참조 제거
 - 변신 시스템(v1.0.7)은 유지
+
+## v1.0.9 - Transform HP recovery
+- 변신 직후 HP 회복 옵션을 추가했습니다.
+- `transform.healAfterTransformRatio`: 변신 후 최대 HP 기준 비율 회복. 예: `0.3` = 최대 HP의 30% 회복.
+- `transform.healAfterTransform`: 변신 후 고정 HP 회복.
+- 회복 후 HP는 변신 대상 캐릭터의 maxHp를 넘지 않도록 제한됩니다.
+- 걍사람 → 각성한 걍사람 변신에 기본 `healAfterTransformRatio: 0.3`을 적용했습니다.

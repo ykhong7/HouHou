@@ -14,7 +14,7 @@
   "stopGap": 16,
   "critRate": 0.15,
   "attackType": "projectile",
-  "projectilePath": "assets/projectiles/awakened_eungae/candy.png",
+  "projectilePath": "assets/projectiles/awakened_eungae/Pacifier.png",
   "projectileSpeed": 620,
   "frameSize": 96,
   "spritePath": "assets/characters/awakened_eungae/",
